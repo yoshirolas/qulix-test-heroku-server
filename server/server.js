@@ -12,6 +12,6 @@ app.get('/', (req, res) => {
 res.sendFile(path.resolve(`${__dirname}/build`, 'index.html'))  
 });
 
-app.listen(3001, function () {
+app.listen(process.env.PORT || 3001, function () {
   console.log(`Server is run and listening on port localhost:3001`);
 });
